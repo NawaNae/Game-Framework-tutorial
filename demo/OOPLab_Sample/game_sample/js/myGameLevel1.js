@@ -1,6 +1,11 @@
 ﻿var MyGame = Framework.Class(Framework.Level , {
 	load: function(){
         var characterPosition;
+        //3
+        this.practice = new Practice();
+        this.practice.load();
+        this.rootScene.attach(this.practice.picture);
+
 
         this.position = { x: 100, y: 100 };
         this.rotation = 0;
@@ -108,7 +113,9 @@
 
     update: function() {
         var game = this;
+        this.practice.update();
         this.rootScene.update(); 
+
 
         //2
         this.position.x++;
