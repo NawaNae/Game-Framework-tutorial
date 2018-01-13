@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		demo\OOPLab_Sample\game_sample\js\mainGame.js = demo\OOPLab_Sample\game_sample\js\mainGame.js
 		demo\OOPLab_Sample\game_sample\js\myGameLevel1.js = demo\OOPLab_Sample\game_sample\js\myGameLevel1.js
 		demo\OOPLab_Sample\game_sample\js\myMenu.js = demo\OOPLab_Sample\game_sample\js\myMenu.js
+		demo\OOPLab_Sample\game_sample\js\Practice.js = demo\OOPLab_Sample\game_sample\js\Practice.js
 	EndProjectSection
 EndProject
 Global

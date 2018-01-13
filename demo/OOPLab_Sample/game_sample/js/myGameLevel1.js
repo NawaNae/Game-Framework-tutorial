@@ -1,7 +1,21 @@
 ﻿var MyGame = Framework.Class(Framework.Level , {
 	load: function(){
-	    var characterPosition;
+        var characterPosition;
 
+        this.position = { x: 100, y: 100 };
+        this.rotation = 0;
+
+        this.pictures = new Array(new Framework.Sprite(define.imagePath + '169.bmp'), new Framework.Sprite(define.imagePath + '173.bmp'));
+        this.pictures[0].position =
+            {
+                x: 100, y: 100
+            };
+
+        this.rootScene.attach(this.pictures[0]);//1-A
+        this.pictures[1].position =
+            {
+                x: 100, y: 200
+            };
         this.isStop = false;
         this.isPlayed = false;
 
@@ -95,7 +109,13 @@
     update: function() {
         var game = this;
         this.rootScene.update(); 
-		
+
+        //2
+        this.position.x++;
+        this.rotation++;
+        this.pictures[0].position = this.position;
+        this.pictures[0].rotation = this.rotation;
+
         //以下為當被攻擊時會停下來, 並且當被攻擊的動畫播放完時便繼續跑的Scenario
         if(this.firen.collide(this.freeze) && !this.isStop && !this.isPlayed) {
             this.isStop = true;
@@ -129,6 +149,7 @@
 
     draw:function(parentCtx){
         this.rootScene.draw();
+        this.pictures[1].draw();//1-B;
         //可支援畫各種單純的圖形和字
         parentCtx.fillStyle = (this.secondHandRotationRate > 0)?'green':'red'; 
         parentCtx.fillRect(this.rectPosition.x , this.rectPosition.y, 260, 90);  
