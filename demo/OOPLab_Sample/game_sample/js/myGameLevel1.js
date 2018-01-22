@@ -103,7 +103,11 @@
 			x: 100,
 			y: 100
 		}
-		this.rotation = 0;
+        this.rotation = 0;
+        //4
+        this.gameMap = new GameMap();
+        this.gameMap.load();
+        this.rootScene.attach(this.gameMap);
 	},
 
     initialize: function() {
