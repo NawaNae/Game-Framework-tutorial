@@ -1,5 +1,16 @@
 class Practice
 {
+    keydown(e, list)
+    {
+        switch (e.key)
+        {
+            case 'Right':
+                this.picture.rotation += 10;
+                break;
+            case 'Left':
+                this.picture.rotation -= 10;
+        }
+    }
     load()
     {
         this.picture = new Framework.Sprite(define.imagePath + '169.bmp');
@@ -14,14 +25,14 @@ class Practice
     };
     update()
     {
-        this.position =
+       /* this.position =
             {
                 x: this.position.x + 1,
                 y: this.position.y
             };
         this.rotation += 1;
         this.picture.position = this.position;
-        this.picture.rotation = this.rotation;
+        this.picture.rotation = this.rotation;*/
     };
     draw(ctx)
     {

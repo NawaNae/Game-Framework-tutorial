@@ -121,7 +121,7 @@
         this.rootScene.update(); 
 
 
-        //2
+       //2
         this.position.x++;
         this.rotation++;
         this.pictures[0].position = this.position;
@@ -173,7 +173,8 @@
         
     },
 
-    keydown:function(e, list){
+    keydown: function (e, list) {
+        this.practice.keydown(e, list);
         Framework.DebugInfo.Log.warning(e.key);
         if(e.key === 'Numpad +' || e.key === '=') {
             this.secondHandRotationRate += 0.05;
